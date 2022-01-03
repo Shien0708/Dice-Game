@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		647E3186277EB59C008C9195 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647E3185277EB59C008C9195 /* ViewController2.swift */; };
 		64BC2D53277DCC230087B921 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BC2D52277DCC230087B921 /* AppDelegate.swift */; };
 		64BC2D55277DCC230087B921 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BC2D54277DCC230087B921 /* SceneDelegate.swift */; };
 		64BC2D57277DCC230087B921 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BC2D56277DCC230087B921 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		647E3185277EB59C008C9195 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		64BC2D4F277DCC230087B921 /* Dice Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dice Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		64BC2D52277DCC230087B921 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64BC2D54277DCC230087B921 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				64BC2D52277DCC230087B921 /* AppDelegate.swift */,
 				64BC2D54277DCC230087B921 /* SceneDelegate.swift */,
 				64BC2D56277DCC230087B921 /* ViewController.swift */,
+				647E3185277EB59C008C9195 /* ViewController2.swift */,
 				64BC2D58277DCC230087B921 /* Main.storyboard */,
 				64BC2D5B277DCC230087B921 /* Assets.xcassets */,
 				64BC2D5D277DCC230087B921 /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64BC2D57277DCC230087B921 /* ViewController.swift in Sources */,
+				647E3186277EB59C008C9195 /* ViewController2.swift in Sources */,
 				64BC2D53277DCC230087B921 /* AppDelegate.swift in Sources */,
 				64BC2D55277DCC230087B921 /* SceneDelegate.swift in Sources */,
 			);
