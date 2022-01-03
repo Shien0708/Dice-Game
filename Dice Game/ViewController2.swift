@@ -425,7 +425,7 @@ class ViewController2: UIViewController {
         compCatchButton.isHidden = true
     }
     
-   /如果對家當下的點數個數大於雙方點數總個數的話，我家獲勝，否則對家獲勝
+   //如果對家當下的點數個數大於雙方點數總個數的話，我家獲勝，否則對家獲勝
         if Int(countStepper2.value) > total[numberSegmentedControl2.selectedSegmentIndex] {
             compConclusionLabel.text = "You lose!"
             playerConclusionLabel.text = "You win!"
