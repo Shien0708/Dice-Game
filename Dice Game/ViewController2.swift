@@ -302,8 +302,8 @@ class ViewController2: UIViewController {
     //從玩家一的褐色 Call 按鈕連出一個喊話的方法
     @IBAction func speak(_ sender: UIButton) {
         
-        //如果該玩家的 stepper value 大於對方的值，才能執行以下方法
-        if countStepper.value >= countStepper2.value {
+        //如果該玩家選擇的個數與對方相同、點數大於對方，或點數相同、個數大於對方時，才能執行以下方法
+        if countStepper.value == countStepper2.value && numberSegmentedControl.selectedSegmentIndex > numberSegmentedControl2.selectedSegmentIndex || countStepper.value > countStepper2.value && numberSegmentedControl.selectedSegmentIndex == numberSegmentedControl2.selectedSegmentIndex  {
             
             //如果該玩家的 stepper value 小於 1，就顯示There is ，否則顯示 There are
             playerCallLabel.text = countStepper.value <= 1 ? "There is " : "There are "
@@ -324,8 +324,8 @@ class ViewController2: UIViewController {
             
         } else {
             
-            //如果該玩家的 stepper value 小於對方的值，顯示以下內容
-            playerWarningLabel.text = "Your count must greater than the other player's!"
+            //如果該玩家的個數相同、點數小於對方，或點數相同、個數小於對方，顯示以下內容
+            playerWarningLabel.text = "Your count or point must greater than the other player's!"
             
         }
         
@@ -334,7 +334,8 @@ class ViewController2: UIViewController {
     
     @IBAction func compSpeak(_ sender: UIButton) {
         
-        if countStepper2.value >= countStepper.value {
+        if countStepper2.value > countStepper.value && numberSegmentedControl2.selectedSegmentIndex == numberSegmentedControl.selectedSegmentIndex || countStepper2.value == countStepper.value && numberSegmentedControl2.selectedSegmentIndex > numberSegmentedControl.selectedSegmentIndex {
+            
             compCallLabel.text = countStepper2.value <= 1 ? "There is " : "There are "
             
             compCallLabel.text! += "\(Int(countStepper2.value)) point \(numberSegmentedControl2.selectedSegmentIndex+1)"
@@ -349,7 +350,7 @@ class ViewController2: UIViewController {
             playerCallButton.isHidden = false
             
         } else {
-            compWarningLabel.text = "Your count must greater than the other player's!"
+            compWarningLabel.text = "Your count or point must greater than the other player's!"
         }
         
     }
@@ -425,8 +426,8 @@ class ViewController2: UIViewController {
     //從玩家一的紅色 Catch 按鈕連出一個抓對家的方法
     @IBAction func playerCatch(_ sender: UIButton) {
         
-        //如果對家的個數跟對家當下的的點數總個數不同的話，我家獲勝，否則對家獲勝
-        if Int(countStepper2.value) != total[numberSegmentedControl2.selectedSegmentIndex] {
+        ////如果對家的個數小於對家當下的的點數總個數的話，我家獲勝，否則對家獲勝
+        if Int(countStepper2.value) < total[numberSegmentedControl2.selectedSegmentIndex] {
             compConclusionLabel.text = "You lose!"
             playerConclusionLabel.text = "You win!"
         } else {
@@ -442,7 +443,7 @@ class ViewController2: UIViewController {
     //從玩家二的紅色 Catch 按鈕連出一個抓對家的方法
     @IBAction func compCatch(_ sender: UIButton) {
         
-        if Int(countStepper.value) != total[numberSegmentedControl.selectedSegmentIndex] {
+        if Int(countStepper.value)  total[numberSegmentedControl.selectedSegmentIndex] {
             
             compConclusionLabel.text = "You win!"
             playerConclusionLabel.text = "You lose!"
